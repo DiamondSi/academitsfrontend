@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой первый сайт</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>
+            Фамилия <input type="text" id="firstName" size="40" name="firstName">
+        </label>
+    </p>
+    <p>
+        <label>
+            Имя <input type="text" id="secondName" size="40" name="secondName">
+        </label>
+    </p>
+    <p>
+        <label>
+            Описание <textarea id="description" rows="10" cols="40" name="description"> </textarea>
+        </label>
+    </p>
+    <p>
+        Напиток:
+        <label>
+            <input type="radio" value="vodka" name="addition"/> Водка
+        </label>
+        <label>
+            <input type="radio" value="lemon" name="addition"/> Джин
+        </label>
+        <label>
+            <input type="radio" value="cola" name="addition" checked="checked"/> Виски
+        </label>
+    </p>
+    <p>
+        Добавить:
+        <label>
+            <input type="checkbox" id="lemon"/> Лимон
+        </label>
+        <label>
+            <input type="checkbox" id="tonic"/> Тоник
+        </label>
+        <label>
+            <input type="checkbox" id="sprite"/> Спрайт
+        </label>
+        <label>
+            <input type="checkbox" id="cola" checked="checked"/> Кола
+        </label>
+        <label>
+            <input type="checkbox" id="ice" checked="checked"/> Лед
+        </label>
+    </p>
+    <p>
+        Объем
+        <select name="dose">
+            <option disabled>мл.</option>
+            <option value="40" selected>40</option>
+            <option value="250">250</option>
+            <option value="500">500</option>
+        </select>
+    </p>
+    <p>
+        <select multiple size=5 name="snaks">
+            <option disabled>Закуска</option>
+            <option value="nuts">Орешки</option>
+            <option value="pistachios">Фисташки</option>
+            <option value="olives" selected>Оливки</option>
+            <option value="lemonslices" selected>Ломтики лимона</option>
+        </select>
+    </p>
+</form>
+</body>
+</html>
