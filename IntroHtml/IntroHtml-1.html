@@ -8,12 +8,12 @@
 <form>
     <p>
         <label>
-            Фамилия <input type="text" id="firstName" size="40" name="firstName">
+            Официант <input type="text" id="waitressName" size="40" name="waitressName">
         </label>
     </p>
     <p>
         <label>
-            Имя <input type="text" id="secondName" size="40" name="secondName">
+            Номер стола <input type="text" id="tableNumber" size="40" name="tableNumber">
         </label>
     </p>
     <p>
@@ -21,8 +21,7 @@
             Описание <textarea id="description" rows="10" cols="40" name="description"> </textarea>
         </label>
     </p>
-    <p>
-        Напиток:
+    <p> Напиток:
         <label>
             <input type="radio" value="vodka" name="addition"/> Водка
         </label>
@@ -33,8 +32,7 @@
             <input type="radio" value="cola" name="addition" checked="checked"/> Виски
         </label>
     </p>
-    <p>
-        Добавить:
+    <p> Добавить:
         <label>
             <input type="checkbox" id="lemon"/> Лимон
         </label>
@@ -51,23 +49,26 @@
             <input type="checkbox" id="ice" checked="checked"/> Лед
         </label>
     </p>
-    <p>
-        Объем
-        <select name="dose">
-            <option disabled>мл.</option>
-            <option value="40" selected>40</option>
-            <option value="250">250</option>
-            <option value="500">500</option>
-        </select>
+    <p> Объем
+        <label>
+            <select name="dose">
+                <option disabled>мл.</option>
+                <option value="40" selected>40</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+            </select>
+        </label>
     </p>
     <p>
-        <select multiple size=5 name="snaks">
-            <option disabled>Закуска</option>
-            <option value="nuts">Орешки</option>
-            <option value="pistachios">Фисташки</option>
-            <option value="olives" selected>Оливки</option>
-            <option value="lemonslices" selected>Ломтики лимона</option>
-        </select>
+        <label>
+            <select multiple size="5" name="snacks">
+                <option disabled>Закуски</option>
+                <option value="nuts">Орешки</option>
+                <option value="pistachios">Фисташки</option>
+                <option value="olives" selected>Оливки</option>
+                <option value="lemonslices" selected>Ломтики лимона</option>
+            </select>
+        </label>
     </p>
 </form>
 </body>
