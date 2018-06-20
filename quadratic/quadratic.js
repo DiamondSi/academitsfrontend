@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (a === 0 && b === 0) {
         console.log("%f*x^2 + %f*x * %f = 0 -> %f = 0 неверное математическое выражение", a, b, c, c);
     } else if (a === 0) {
-        var x = -c / b;
+        x = -c / b;
         console.log("%f*x^2 + %f*x * %f = 0 -> %f*x + %f = 0 Это не квадратное уравнение. x = %f", a, b, c, b, c, x);
     } else if (discriminant < 0) {
         console.log("Дискриминант = %f", discriminant);
