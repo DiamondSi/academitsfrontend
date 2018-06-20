@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var list = [11, 12, 31, 42, 5, 48, 122, 0, 2];
+  var list = [11, 12, 31, 42, 5, 48, 122, 0, 2];
 
     console.log(list.join(", "));
     list.sort(function (a, b) {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var list100 = [];
     console.log(list100.join(", "));
     for (var i = 1; i <= 100; i++) {
-        list100[i - 1] = i;
+        list100.push(i - 1);
     }
     console.log(list100.join(", "));
 
@@ -42,4 +41,3 @@ document.addEventListener("DOMContentLoaded", function () {
         return sum;
     }, 0);
     console.log(evenSum2);
-});
