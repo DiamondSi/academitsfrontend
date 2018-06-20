@@ -1,0 +1,31 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var a = 1;
+    var b = -6;
+    var c = 9;
+    var x;
+    var discriminant = b * b - 4 * a * c;
+
+    if (a === 0 && b === 0 && c === 0) {
+        console.log("%f*x^2 + %f*x * %f = 0 -> 0 = 0. Это не квадратное уравнение. x - любоe число.", a, b, c);
+    } else if (a === 0 && b === 0) {
+        console.log("%f*x^2 + %f*x * %f = 0 -> %f = 0 неверное математическое выражение", a, b, c, c);
+    } else if (a === 0) {
+        var x = -c / b;
+        console.log("%f*x^2 + %f*x * %f = 0 -> %f*x + %f = 0 Это не квадратное уравнение. x = %f", a, b, c, b, c, x);
+    } else if (discriminant < 0) {
+        console.log("Дискриминант = %f", discriminant);
+        console.log("Корней, на множестве действительных чисел, нет.");
+    } else if (discriminant === 0) {
+        console.log("Дискриминант = %f", discriminant);
+        x = -b / (2 * a);
+        if (b === 0) {
+            x = 0;
+        }
+        console.log("x1 = x2 = %f", x);
+    } else {
+        console.log("Дискриминант = %f", discriminant);
+        var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        console.log("x1 = %f, x2 = %f", x1, x2);
+    }
+});
