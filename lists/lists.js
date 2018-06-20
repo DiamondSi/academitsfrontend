@@ -29,7 +29,7 @@ console.log(evenSum);
 var list100 = [];
 console.log(list100.join(", "));
 for (var i = 1; i <= 100; i++) {
-    list100.push(i - 1);
+    list100.push(i);
 }
 console.log(list100.join(", "));
 
