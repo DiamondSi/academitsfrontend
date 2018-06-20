@@ -1,31 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var a = 1;
-    var b = -6;
-    var c = 9;
-    var x;
-    var discriminant = b * b - 4 * a * c;
+    var calculateButton = document.getElementById("calculate-button");
+    calculateButton.addEventListener("click", function () {
+        var a = parseFloat(document.getElementById("ka").value);
+        var b = parseFloat(document.getElementById("kb").value);
+        var c = parseFloat(document.getElementById("kc").value);
 
-    if (a === 0 && b === 0 && c === 0) {
-        console.log("%f*x^2 + %f*x * %f = 0 -> 0 = 0. Это не квадратное уравнение. x - любоe число.", a, b, c);
-    } else if (a === 0 && b === 0) {
-        console.log("%f*x^2 + %f*x * %f = 0 -> %f = 0 неверное математическое выражение", a, b, c, c);
-    } else if (a === 0) {
-        x = -c / b;
-        console.log("%f*x^2 + %f*x * %f = 0 -> %f*x + %f = 0 Это не квадратное уравнение. x = %f", a, b, c, b, c, x);
-    } else if (discriminant < 0) {
-        console.log("Дискриминант = %f", discriminant);
-        console.log("Корней, на множестве действительных чисел, нет.");
-    } else if (discriminant === 0) {
-        console.log("Дискриминант = %f", discriminant);
-        x = -b / (2 * a);
-        if (b === 0) {
-            x = 0;
+        var x;
+        var discriminant = b * b - 4 * a * c;
+
+        var result;
+
+        if (a === 0 && b === 0 && c === 0) {
+            result = a + "*x2 + " + b + "*x + " + c + " -> 0 = 0. Это не квадратное уравнение. x - любоe число.";
+        } else if (a === 0 && b === 0) {
+            result = a + "*x2 + " + b + "*x +" + c + " = 0 неверное математическое выражение";
+        } else if (a === 0) {
+            x = -c / b;
+            result = a + "*x2 + " + b + "*x +" + c + " = 0 -> " + b + "x + " + c + " = 0 Это не квадратное уравнение. x = " + x;
+        } else if (discriminant < 0) {
+            result = "Дискриминант = " + discriminant + " Корней, на множестве действительных чисел, нет.";
+        } else if (discriminant === 0) {
+            x = -b / (2 * a);
+            if (b === 0) {
+                x = 0;
+            }
+            result = "Дискриминант = " + discriminant + " x1 = x2 = " + x;
+        } else {
+            var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            result = "Дискриминант = " + discriminant + " x1 = " + x1 + ", x2 = " + x2;
         }
-        console.log("x1 = x2 = %f", x);
-    } else {
-        console.log("Дискриминант = %f", discriminant);
-        var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-        var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-        console.log("x1 = %f, x2 = %f", x1, x2);
-    }
+        var resultOutput = document.createElement("label");
+        resultOutput.innerText = result;
+        document.body.appendChild(resultOutput);
+    });
 });
