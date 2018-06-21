@@ -22,7 +22,9 @@ function isEven(arg) {
 var evenSum = list.reduce(function (sum, current) {
     if (isEven(current)) {
         return sum + current;
-    } else return sum;
+    } else{
+        return sum;
+    }
 }, 0);
 console.log(evenSum);
 
@@ -36,6 +38,8 @@ console.log(list100.join(", "));
 var evenSum2 = list100.reduce(function (sum, current) {
     if (isEven(current)) {
         return sum + current;
-    } else return sum;
+    } else{
+        return sum;
+    }
 }, 0);
 console.log(evenSum2);
