@@ -1,0 +1,23 @@
+{
+  "name": "underscoretask",
+  "version": "1.0.0",
+  "description": "underscore learning task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DiamondSi/academitsfrontend.git"
+  },
+  "author": "Diamond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiamondSi/academitsfrontend/issues"
+  },
+  "homepage": "https://github.com/DiamondSi/academitsfrontend#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "underscore": "^1.9.1"
+  }
+}
